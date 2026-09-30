@@ -64,11 +64,12 @@ function UserCard({ user }) {
       className="
         group
         flex
+        h-full
         min-h-[400px]
         flex-col
         items-center
-        justify-between
-        gap-5
+        justify-start
+        gap-4
         rounded-2xl
         border
         border-gray-200
@@ -120,16 +121,16 @@ function UserCard({ user }) {
         />
       </div>
 
-      <h3 className="text-2xl font-bold text-gray-900">
+      <h3 className="text-xl md:text-2xl font-bold text-gray-900">
         {user.name}
       </h3>
 
-      <span className="text-lg font-medium text-blue-600">
+      <span className="text-base md:text-lg font-medium text-blue-600">
         {user.role}
       </span>
 
 
-      <p className="text-base leading-6 text-gray-600">
+      <p className="text-sm md:text-base leading-6 text-gray-600">
         {user.bio}
       </p>
 
@@ -137,6 +138,7 @@ function UserCard({ user }) {
       <button
         onClick={handleFollow}
         className={`
+          mt-auto
           w-full
           rounded-lg
           px-5
